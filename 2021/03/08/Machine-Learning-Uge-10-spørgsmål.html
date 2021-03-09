@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Machine Learning Uge 10 Spørgsmål | fastpages_blog</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Machine Learning Uge 10 Spørgsmål" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="1. Why do we first resize to a large size on the CPU, and then to a smaller size on the GPU?" />
+<meta property="og:description" content="1. Why do we first resize to a large size on the CPU, and then to a smaller size on the GPU?" />
+<link rel="canonical" href="https://domovou.github.io/fastpages_blog/2021/03/08/Machine-Learning-Uge-10-sp%C3%B8rgsm%C3%A5l.html" />
+<meta property="og:url" content="https://domovou.github.io/fastpages_blog/2021/03/08/Machine-Learning-Uge-10-sp%C3%B8rgsm%C3%A5l.html" />
+<meta property="og:site_name" content="fastpages_blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-03-08T00:00:00-06:00" />
+<script type="application/ld+json">
+{"url":"https://domovou.github.io/fastpages_blog/2021/03/08/Machine-Learning-Uge-10-sp%C3%B8rgsm%C3%A5l.html","@type":"BlogPosting","headline":"Machine Learning Uge 10 Spørgsmål","dateModified":"2021-03-08T00:00:00-06:00","datePublished":"2021-03-08T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://domovou.github.io/fastpages_blog/2021/03/08/Machine-Learning-Uge-10-sp%C3%B8rgsm%C3%A5l.html"},"description":"1. Why do we first resize to a large size on the CPU, and then to a smaller size on the GPU?","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/fastpages_blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://domovou.github.io/fastpages_blog/feed.xml" title="fastpages_blog" /><link rel="shortcut icon" type="image/x-icon" href="/fastpages_blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/fastpages_blog/">fastpages_blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/fastpages_blog/about/">About Me</a><a class="page-link" href="/fastpages_blog/search/">Search</a><a class="page-link" href="/fastpages_blog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Machine Learning Uge 10 Spørgsmål</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-03-08T00:00:00-06:00" itemprop="datePublished">
+        Mar 8, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      3 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>1. <strong>Why do we first resize to a large size on the CPU, and then to a smaller size on the GPU?</strong></p>
+
+<ul>
+  <li>
+    <blockquote>
+      <p>Konceptet er kaldt for Presizing. CPU’en er hurtigere til at opskalere. Data augmentation er ofte brugt på billeder og i fastai bliver det gjort på GPU’en, dog kan dette lede til dårligere kvalitet af billedet (degradation osv).</p>
+    </blockquote>
+  </li>
+</ul>
+
+<p>item_tfms=Resize(460),</p>
+
+<p>batch_tfms=aug_transforms(size=224, min_scale=0.75)</p>
+
+<p>2. <strong>Gennemgå Learn Regex: A Beginner’s Guide</strong></p>
+
+<p>3. <strong>What are the two ways in which data is most commonly provided, for most deep learning datasets?</strong></p>
+
+<ul>
+  <li>
+    <blockquote>
+      <p>Individual files representing items of data, such as text documents or images, possibly organized into folders or with filenames representing information about those items</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p>A table of data, such as in CSV format, where each row is an item which may include filenames providing a connection between the data in the table and data in other formats, such as text documents and images</p>
+    </blockquote>
+  </li>
+</ul>
+
+<p>4. <strong>Look up the documentation for L and try using a few of the new methods that it adds.</strong></p>
+
+<p><a href="https://fastcore.fast.ai/foundation#L"><span class="underline">https://fastcore.fast.ai/foundation#L</span></a></p>
+
+<ul>
+  <li>
+    <blockquote>
+      <p>Format displaying</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p>Det første der bliver vist er antal af elementer med en prefix #</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p>Kun de første enkelte elementer i listen bliver displayet, selvom der kunne være 100</p>
+    </blockquote>
+  </li>
+</ul>
+
+<p>5. Look up the documentation for the Python pathlib module and try using a few methods of the Path class.</p>
+
+<p><img src="https://Domovou.github.io/fastpages_blog/assets/img/2021-03-08-Machine-Learning-Uge-10-spørgsmål/media/image1.png" alt="" /></p>
+
+<p>https://docs.python.org/3/library/pathlib.html</p>
+
+<p>6. <strong>Give two examples of ways that image transformations can degrade the quality of the data.</strong></p>
+
+<p><img src="https://Domovou.github.io/fastpages_blog/assets/img/2021-03-08-Machine-Learning-Uge-10-spørgsmål/media/image2.png" alt="" /></p>
+
+<p>læg her mærke til græsset i kanterne, ligesom at ansigtet i billedet til højre har mistet lidt af sin skarphed.</p>
+
+<p>7. <strong>What method does fastai provide to view the data in a DataLoaders?</strong></p>
+
+<p><strong>DataLoader.show_batch</strong></p>
+
+<p>8. <strong>What method does fastai provide to help you debug a DataBlock?</strong></p>
+
+<p><em>#hide_output</em></p>
+
+<p>pets1 = DataBlock(blocks = (ImageBlock, CategoryBlock),</p>
+
+<p>get_items=get_image_files,</p>
+
+<p>splitter=RandomSplitter(seed=42),</p>
+
+<p>get_y=using_attr(RegexLabeller(r’(.+)_\d+.jpg$’), ‘name’))</p>
+
+<p><strong>pets1.summary(path/”images”)</strong></p>
+
+<p>9. <strong>Should you hold off on training a model until you have thoroughly cleaned your data?</strong></p>
+
+<p>No. It is best to create a baseline model as soon as possible.</p>
+
+<p>10<strong>. What are the two pieces that are combined into cross-entropy loss in PyTorch?</strong></p>
+
+<p>Cross Entropy Loss is a combination of a Softmax function and Negative Log Likelihood Loss.</p>
+
+<p>11. <strong>What are the two properties of activations that softmax ensures? Why is this important?</strong></p>
+
+<p>Den sikrer at summen altid er 1. Det betyder at den kun kan klassificere en label.</p>
+
+<p>med andre ord normalisere Softmax vores inputs.</p>
+
+<p>Den forstærker/forstørrer forskellen mellem to klassifiseringer.</p>
+
+<p>12. <strong>When might you want your activations to not have these two properties?</strong></p>
+
+<p>Hvis man vil have multi-label klassificeringer, skal summen ikke altid blive 1.</p>
+
+<p>13. <strong>Calculate the exp and softmax columns of &lt;&lt;bear_softmax&gt;&gt; yourself (i.e., in a spreadsheet, with a calculator, or in a notebook).</strong></p>
+
+<p>14. <strong>Why can’t we use torch.where to create a loss function for datasets where our label can have more than two categories?</strong></p>
+
+<p>15. <strong>What is the value of log(-2)? Why?</strong></p>
+
+<p>16. <strong>What are two good rules of thumb for picking a learning rate from the learning rate finder?</strong></p>
+
+<p>17. <strong>What two steps does the fine_tune method do?</strong></p>
+
+<p>18. <strong>In Jupyter Notebook, how do you get the source code for a method or function?</strong></p>
+
+<p>Skriv ‘??’ efter navnet på metoden/funktionen.</p>
+
+<p>19. <strong>What are discriminative learning rates?</strong></p>
+
+<p>da ens første layer ikke nødvendigvis har brug for at være ens mest præcise layer, kan man med fordel gøre brug af discriminative læringskurver til at hjælpe en med at forbedre ens “training loss”. vær dog opmærksom på at ens “validation loss” kan stagnere eller endda blive farligere og man derfor kan få en model som er overmodig.</p>
+
+<p>20. <strong>How is a Python slice object interpreted when passed as a learning rate to fastai?</strong></p>
+
+<p>21. <strong>Why is early stopping a poor choice when using 1cycle training?</strong></p>
+
+<p>Fordi epochs i midten opstår før learning raten får en chance for at nå de mindre værdier, hvor den virkelig kan finde det bedste resultat.</p>
+
+<p><em>Because those epochs in the middle occur before the learning rate has had a chance to reach the small values, where it can really find the best result. Overfit</em></p>
+
+<p>22. <strong>What is the difference between resnet50 and resnet101?</strong></p>
+
+<p>Amount of epochs. The difference is thus 51 (101-50)</p>
+
+<p>23. <strong>What does to_fp16 do?</strong></p>
+
+<p>Nvidia specifik, tensor cores som dramatisk speeder op træningen (2 til 3 gange).</p>
+
+<p>Et mindre præcist tal som kaldes <em>half-precision floating point.</em></p>
+
+<p><img src="https://Domovou.github.io/fastpages_blog/assets/img/2021-03-08-Machine-Learning-Uge-10-spørgsmål/media/image4.png" alt="" /></p>
+
+<p><img src="https://Domovou.github.io/fastpages_blog/assets/img/2021-03-08-Machine-Learning-Uge-10-spørgsmål/media/image3.png" alt="" /></p>
+
+  </div><a class="u-url" href="/fastpages_blog/2021/03/08/Machine-Learning-Uge-10-sp%C3%B8rgsm%C3%A5l.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/fastpages_blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/fastpages_blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/fastpages_blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/fastpages_blog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/fastpages_blog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
